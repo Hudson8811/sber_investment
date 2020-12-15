@@ -550,10 +550,7 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-
-    & + & {
-      margin-top: 1.04vw;
-    }
+    padding-bottom: 1.04vw;
 
     p {
       display: block;
@@ -759,6 +756,7 @@ body {
     margin-left: -1.04vw;
     height: 7.18vw;
     overflow: hidden;
+    flex-shrink: 0;
 
     &-false {
       display: block;
