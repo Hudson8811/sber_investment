@@ -519,6 +519,10 @@ body {
   }
 }
 
+.flickity-button.previous {
+  background: #fff center / cover url(../img/slick-prev.svg) no-repeat;
+}
+
 .flickity-button.next {
   background: #fff center / cover url(../img/slick-next.svg) no-repeat;
 }
