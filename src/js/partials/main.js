@@ -68,5 +68,27 @@ $(document).ready(function(){
     $('.bac-slider_mif-true').toggleClass('is-active');
   })
   
+  $(window).resize(function(){
+    $('.slider').flickity('destroy');
+    $('.bac-slider').flickity('destroy');
+    $('.slider').flickity({
+      // options
+      cellAlign: 'center',
+      contain: true,
+      wrapAround: true,
+      prevNextButtons: true,
+      pageDots: false,
+    });
   
+    $('.bac-slider').flickity({
+      // options
+      cellAlign: 'center',
+      contain: true,
+      wrapAround: true,
+      prevNextButtons: true,
+      pageDots: false
+    });
+
+    
+  })
 })
