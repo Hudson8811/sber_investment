@@ -4338,33 +4338,33 @@ $(document).ready(function(){
   })
 
   $(document).on('click', '.slider-item_before', function(){
-if($(window).width() > 768){
-  const index = $(this).parents('.slider-item_wrapper').index();
-  const indexActive = $('.slider-item_wrapper.is-selected').index();
-  const indexAll = $('.slider-item_wrapper').length - 1
+    if($(window).width() > 768){
+      const index = $(this).parents('.slider-item_wrapper').index();
+      const indexActive = $('.slider-item_wrapper.is-selected').index();
+      const indexAll = $('.slider-item_wrapper').length - 1
 
-  if(index > indexActive && index != indexAll){
-    $('.slider').flickity( 'select', index + 1);
-    console.log(index, indexActive, indexAll)
-  } else if (index < indexActive && indexActive != 0 ){
-    if(indexActive == indexAll && index == 0){
-      $('.slider').flickity( 'select', indexAll + 2);
-    } else{
-      $('.slider').flickity( 'select', index - 1);
+      if(index > indexActive && index != indexAll){
+        $('.slider').flickity( 'select', index + 1);
+        console.log(index, indexActive, indexAll)
+      } else if (index < indexActive && indexActive != 0 ){
+        if(indexActive == indexAll && index == 0){
+          $('.slider').flickity( 'select', indexAll + 2);
+        } else{
+          $('.slider').flickity( 'select', index - 1);
+        }
+        
+        console.log(index, indexActive, indexAll)
+      } else if(index == indexAll && indexActive != indexAll - 1){
+        $('.slider').flickity( 'select', indexAll - 1);
+        console.log(index, indexActive, indexAll)
+      } else if(indexActive == 0){
+        $('.slider').flickity( 'select', indexAll);
+        console.log(index, indexActive, indexAll)
+      } else if(index == indexAll && indexActive == indexAll - 1){
+        $('.slider').flickity( 'select', indexAll + 1);
+        console.log(index, indexActive, indexAll)
+      }
     }
-    
-    console.log(index, indexActive, indexAll)
-  } else if(index == indexAll && indexActive != indexAll - 1){
-    $('.slider').flickity( 'select', indexAll - 1);
-    console.log(index, indexActive, indexAll)
-  } else if(indexActive == 0){
-    $('.slider').flickity( 'select', indexAll);
-    console.log(index, indexActive, indexAll)
-  } else if(index == indexAll && indexActive == indexAll - 1){
-    $('.slider').flickity( 'select', indexAll + 1);
-    console.log(index, indexActive, indexAll)
-  }
-}
   })
 
   $(document).on('click', '.bac-slider_item-before', function(){

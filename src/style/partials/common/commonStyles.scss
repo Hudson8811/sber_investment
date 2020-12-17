@@ -546,6 +546,10 @@ body {
               right: -1.04vw;
               border-radius: 0 12px 12px 0;
               border: 1px solid #08b0de;
+
+              @include mMax {
+                display: block;
+              }
             }
           }
         }
@@ -560,6 +564,10 @@ body {
             right: -1.04vw;
             border-radius: 0 12px 12px 0;
             border: 1px solid #08b0de;
+
+            @include mMax {
+              display: block;
+            }
           }
         }
       }
@@ -635,6 +643,7 @@ body {
     @include mMax {
       font-size: 7.72vw;
       line-height: 8.69vw;
+      transition: none;
     }
   }
 
@@ -646,6 +655,10 @@ body {
     object-position: center;
     transition: 0.2s;
 
+    @include mMax {
+      transition: none;
+    }
+
     &_wrapper {
       position: relative;
       margin: auto 0 1.19vw;
@@ -655,6 +668,10 @@ body {
       min-height: 1px;
       width: 100%;
       transition: 0.2s;
+
+      @include mMax {
+        transition: none;
+      }
     }
   }
 
@@ -675,6 +692,7 @@ body {
     @include mMax {
       font-size: 3.38vw;
       line-height: 4.34vw;
+      transition: none;
     }
   }
 
@@ -969,6 +987,7 @@ body {
       box-shadow: 0px 4px 24px rgba(73, 130, 94, 0.14);
       padding: 0;
       border-radius: 2.89vw;
+      transition: none;
 
       .slider-title {
         width: 100%;
@@ -1264,6 +1283,7 @@ body {
   @include mMax {
     height: auto;
     display: none;
+    transition: none;
   }
 }
 
