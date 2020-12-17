@@ -3,6 +3,10 @@ body {
   padding: 0;
   font-family: 'Open Sans', sans-serif;
   background-color: #fff;
+
+  &.disabled {
+    overflow: hidden;
+  }
 }
 
 .section {
@@ -465,6 +469,10 @@ body {
 
   @include mMax {
     height: 141vw;
+
+    .flickity-viewport {
+      overflow: visible;
+    }
   }
 
   &-wrapper {
@@ -544,6 +552,8 @@ body {
       @include mMax {
         width: 90.57vw;
         margin: 0 20vw;
+        padding: 0;
+        padding-bottom: 9.66vw;
       }
 
       &.is-selected {

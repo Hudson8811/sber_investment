@@ -169,11 +169,13 @@ $(document).ready(function(){
 
 $('.dictionary-btn').click(function(e){
   e.preventDefault();
+  $('body').addClass('disabled');
   $('.dictionary').addClass('is-active')
 })
 
 $('.dictionary-remove-btn').click(function(e){
   e.preventDefault();
+  $('body').removeClass('disabled');
   $('.dictionary').removeClass('is-active')
 })
 })
