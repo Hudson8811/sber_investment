@@ -4384,32 +4384,17 @@ $(document).ready(function(){
     e.preventDefault();
     $('.main-slider-wrapper').addClass('is-disabled');
     $('.sub-slider-wrapper').addClass('is-active');
-    $('.bac-slider').flickity('destroy');
-    $('.bac-slider').flickity({
-      // options
-      cellAlign: 'center',
-      contain: true,
-      wrapAround: true,
-      prevNextButtons: true,
-      pageDots: true,
-      adaptiveHeight: true
-    });
+    $('.bac-slider').flickity('reposition');
+    $('.bac-slider').flickity('resize');
+
   });
+
 
   $(document).on('click', '.bac-slider-burger', function(e){
     e.preventDefault();
     $('.main-slider-wrapper').removeClass('is-disabled');
     $('.sub-slider-wrapper').removeClass('is-active');
 
-    $('.slider').flickity('destroy');
-  $('.slider').flickity({
-		// options
-		cellAlign: 'center',
-		contain: true,
-		wrapAround: true,
-		prevNextButtons: true,
-    pageDots: true,
-  });
   });
 
   $(document).on('click', '.bac-slider_mif-icon', function(e){
@@ -4439,7 +4424,7 @@ $(document).ready(function(){
         prevNextButtons: true,
         pageDots: false
       });
-      }
+    }
   })
 
 $('.dictionary-btn').click(function(e){

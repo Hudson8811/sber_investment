@@ -802,6 +802,10 @@ body {
 
   @include mMax {
     height: auto;
+
+    .slider-image_wrapper {
+      height: 77.29vw;
+    }
   }
 
   &_title {
@@ -1310,13 +1314,15 @@ body {
     z-index: 10;
 
     @include mMax {
-      display: block;
+      position: relative;
+      z-index: 10;
     }
   }
 
   @include mMax {
     height: auto;
-    display: none;
+    position: absolute;
+    z-index: -10;
     transition: none;
   }
 }
@@ -1329,7 +1335,7 @@ body {
     z-index: -10;
 
     @include mMax {
-      display: none;
+      position: absolute;
     }
   }
 }
