@@ -452,6 +452,7 @@ body {
 
 .slider {
   height: 100vh;
+  will-change: auto;
 
   @include mMax {
     height: 141vw;
@@ -465,6 +466,7 @@ body {
     top: 0;
     box-sizing: border-box;
     padding: 0 2vw;
+    will-change: auto;
 
     @include mMax {
       position: relative;
@@ -489,6 +491,7 @@ body {
     height: 100%;
     z-index: 5;
     transition: 0.2s;
+    will-change: auto;
 
     @include mMax {
       height: 141vw;
@@ -527,6 +530,7 @@ body {
       justify-content: center;
       align-items: center;
       width: 33.64vw;
+      will-change: auto;
 
       @include mMax {
         width: 90.57vw;
@@ -639,6 +643,7 @@ body {
     flex-shrink: 0;
     padding-bottom: 1vw;
     transition: 0.2s;
+    will-change: auto;
 
     @include mMax {
       font-size: 7.72vw;
@@ -654,6 +659,7 @@ body {
     object-fit: contain;
     object-position: center;
     transition: 0.2s;
+    will-change: auto;
 
     @include mMax {
       transition: none;

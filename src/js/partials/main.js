@@ -134,7 +134,8 @@ $(document).ready(function(){
   })
   
   $(window).resize(function(){
-    $('.slider').flickity('destroy');
+    if($(window).width() > 768){
+      $('.slider').flickity('destroy');
     $('.bac-slider').flickity('destroy');
     $('.slider').flickity({
       // options
@@ -153,6 +154,7 @@ $(document).ready(function(){
       prevNextButtons: true,
       pageDots: false
     });
+    }
   })
 
 $('.dictionary-btn').click(function(e){
