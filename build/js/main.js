@@ -4275,6 +4275,10 @@ if(window.jQuery && window.fullpage){
 
 $(document).ready(function(){
   new fullpage('#fullpage', {
+    responsiveWidth: 769,
+    afterResponsive: function(isResponsive){
+
+    },
     onLeave: function(index, nextIndex, direction) {
       console.log()
       if($('#section-2').hasClass('active')){
@@ -4320,9 +4324,55 @@ $(document).ready(function(){
     $('.bac-slider').flickity( 'select', index  );
   });
 
-  $('.bac-slider').on( 'change.flickity', function( event, index ) {
 
-    $('.slider').flickity( 'select', index  );
+
+  $(document).on('click', '.slider-item', function(e){
+    if(!$(e.target).hasClass('slider-item_before')){
+      const index = $(this).parent('.slider-item_wrapper').index();
+      $('.slider').flickity( 'select', index);
+      console.log(e.target)
+    }
+  })
+
+  $(document).on('click', '.slider-item_before', function(){
+    const index = $(this).parents('.slider-item_wrapper').index();
+    const indexActive = $('.slider-item_wrapper.is-selected').index();
+    const indexAll = $('.slider-item_wrapper').length - 1
+
+    if(index > indexActive && index != indexAll){
+      $('.slider').flickity( 'select', index + 1);
+      console.log(index, indexActive, indexAll)
+    } else if (index < indexActive && indexActive != 0 ){
+      if(indexActive == indexAll && index == 0){
+        $('.slider').flickity( 'select', indexAll + 2);
+      } else{
+        $('.slider').flickity( 'select', index - 1);
+      }
+      
+      console.log(index, indexActive, indexAll)
+    } else if(index == indexAll && indexActive != indexAll - 1){
+      $('.slider').flickity( 'select', indexAll - 1);
+      console.log(index, indexActive, indexAll)
+    } else if(indexActive == 0){
+      $('.slider').flickity( 'select', indexAll);
+      console.log(index, indexActive, indexAll)
+    } else if(index == indexAll && indexActive == indexAll - 1){
+      $('.slider').flickity( 'select', indexAll + 1);
+      console.log(index, indexActive, indexAll)
+    }
+  })
+
+  $(document).on('click', '.bac-slider_item-before', function(){
+    $('.bac-slider').flickity( 'previous');
+  })
+
+  $(document).on('click', '.bac-slider_item-after', function(){
+    $('.bac-slider').flickity( 'next');
+  })
+
+
+  $('.bac-slider').on( 'change.flickity', function( event, index ) {
+    $('.slider').flickity( 'select', index );
   });
   
   $(document).on('click', '.slider-item .grad-btn', function(e){
@@ -4363,7 +4413,15 @@ $(document).ready(function(){
       prevNextButtons: true,
       pageDots: false
     });
-
-    
   })
+
+$('.dictionary-btn').click(function(e){
+  e.preventDefault();
+  $('.dictionary').addClass('is-active')
+})
+
+$('.dictionary-remove-btn').click(function(e){
+  e.preventDefault();
+  $('.dictionary').removeClass('is-active')
+})
 })
