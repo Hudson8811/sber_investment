@@ -17,7 +17,7 @@ body {
     .container {
       @include mMax {
         box-sizing: border-box;
-        padding: 7.24vw 0;
+        padding: 14.24vw 0 7.24vw 0;
         height: auto;
         min-height: 1px;
       }
@@ -799,6 +799,10 @@ body {
 .bac-slider {
   height: 100vh;
   margin: 0 auto;
+
+  .flickity-page-dots {
+    bottom: -10.66vw;
+  }
 
   @include mMax {
     height: auto;
@@ -1676,7 +1680,7 @@ body {
 
   @include mMax {
     display: block !important;
-    bottom: -9.66vw;
+    bottom: -8.66vw;
 
     .dot {
       width: 3.62vw;

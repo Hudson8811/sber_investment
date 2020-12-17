@@ -4404,17 +4404,19 @@ $(document).ready(function(){
   })
   
   $(window).resize(function(){
-    if($(window).width() > 768){
+ 
       $('.slider').flickity('destroy');
-      $('.bac-slider').flickity('destroy');
+    
       $('.slider').flickity({
         // options
         cellAlign: 'center',
         contain: true,
         wrapAround: true,
         prevNextButtons: true,
-        pageDots: false,
+        pageDots: true,
       });
+
+      $('.bac-slider').flickity('destroy');
     
       $('.bac-slider').flickity({
         // options
@@ -4422,9 +4424,10 @@ $(document).ready(function(){
         contain: true,
         wrapAround: true,
         prevNextButtons: true,
-        pageDots: false
+        pageDots: true,
+        adaptiveHeight:true,
       });
-    }
+   
   })
 
 $('.dictionary-btn').click(function(e){
