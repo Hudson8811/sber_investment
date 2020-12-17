@@ -245,6 +245,7 @@ body {
       font-size: 2.65vw;
       line-height: 5.55vw;
       padding: 0 4.83vw 1vw;
+      margin-top: 41.3vw;
     }
   }
 }
@@ -468,6 +469,7 @@ body {
     @include mMax {
       position: relative;
       height: 150vw;
+      padding: 0;
       padding-bottom: 9.66vw;
     }
   }
@@ -885,7 +887,7 @@ body {
       width: 100%;
 
       .grad-btn {
-        display: none;
+        display: none !important;
       }
     }
 
@@ -1105,7 +1107,7 @@ body {
     @include mMax {
       margin-top: 5.55vw;
       margin-left: -6vw;
-      padding: 2.89vw 3.62vw 8.21vw 23.18vw;
+      padding: 2.89vw 3.62vw 6.21vw 23.18vw;
       height: 46.8vw;
       width: 95.41vw;
       border-radius: 2.89vw;
@@ -1188,6 +1190,11 @@ body {
       overflow: auto;
       margin-right: -2.56vw;
       padding-right: 2.56vw;
+
+      @include mMax {
+        padding-right: 20vw;
+        margin-right: -20vw;
+      }
 
       p {
         font-weight: 600;
@@ -1301,6 +1308,7 @@ body {
   box-sizing: border-box;
   padding: 1.19vw 8.85vw 3.125vw;
   background: #f4f5f6;
+  overflow: hidden;
 
   @include mMax {
     padding: 4.32vw 13.52vw;
@@ -1320,6 +1328,8 @@ body {
       height: 40.09vw;
       font-size: 2.17vw;
       line-height: 2.41vw;
+      padding-right: 20.24vw;
+      margin-right: -20.24vw;
     }
   }
 }
