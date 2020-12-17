@@ -28,8 +28,6 @@ $(document).ready(function(){
 		wrapAround: true,
 		prevNextButtons: true,
     pageDots: true,
-
-    
   });
 
   $('.bac-slider').flickity({
@@ -55,10 +53,12 @@ $(document).ready(function(){
 
 
   $(document).on('click', '.slider-item', function(e){
-    if(!$(e.target).hasClass('slider-item_before')){
-      const index = $(this).parent('.slider-item_wrapper').index();
-      $('.slider').flickity( 'select', index);
-      console.log(e.target)
+    if($(window).width() > 768){
+      if(!$(e.target).hasClass('slider-item_before')){
+        const index = $(this).parent('.slider-item_wrapper').index();
+        $('.slider').flickity( 'select', index);
+        console.log(e.target)
+      }
     }
   })
 
@@ -125,6 +125,16 @@ $(document).ready(function(){
     e.preventDefault();
     $('.main-slider-wrapper').removeClass('is-disabled');
     $('.sub-slider-wrapper').removeClass('is-active');
+
+    
+  $('.slider').flickity({
+		// options
+		cellAlign: 'center',
+		contain: true,
+		wrapAround: true,
+		prevNextButtons: true,
+    pageDots: true,
+  });
   });
 
   $(document).on('click', '.bac-slider_mif-icon', function(e){
@@ -136,25 +146,25 @@ $(document).ready(function(){
   $(window).resize(function(){
     if($(window).width() > 768){
       $('.slider').flickity('destroy');
-    $('.bac-slider').flickity('destroy');
-    $('.slider').flickity({
-      // options
-      cellAlign: 'center',
-      contain: true,
-      wrapAround: true,
-      prevNextButtons: true,
-      pageDots: false,
-    });
-  
-    $('.bac-slider').flickity({
-      // options
-      cellAlign: 'center',
-      contain: true,
-      wrapAround: true,
-      prevNextButtons: true,
-      pageDots: false
-    });
-    }
+      $('.bac-slider').flickity('destroy');
+      $('.slider').flickity({
+        // options
+        cellAlign: 'center',
+        contain: true,
+        wrapAround: true,
+        prevNextButtons: true,
+        pageDots: false,
+      });
+    
+      $('.bac-slider').flickity({
+        // options
+        cellAlign: 'center',
+        contain: true,
+        wrapAround: true,
+        prevNextButtons: true,
+        pageDots: false
+      });
+      }
   })
 
 $('.dictionary-btn').click(function(e){

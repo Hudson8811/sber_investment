@@ -655,12 +655,12 @@ body {
 
   &-image {
     display: block;
-    width: 100%;
+    width: auto;
     height: 100%;
-    object-fit: contain;
-    object-position: center;
+    max-width: 100%;
     transition: 0.2s;
     will-change: auto;
+    margin: 0 auto;
 
     @include mMax {
       transition: none;
@@ -675,9 +675,12 @@ body {
       min-height: 1px;
       width: 100%;
       transition: 0.2s;
+      overflow: hidden;
 
       @include mMax {
         transition: none;
+        box-sizing: border-box;
+        padding: 2vw 0;
       }
     }
   }
