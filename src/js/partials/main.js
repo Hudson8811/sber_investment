@@ -126,7 +126,7 @@ $(document).ready(function(){
     $('.main-slider-wrapper').removeClass('is-disabled');
     $('.sub-slider-wrapper').removeClass('is-active');
 
-    
+    $('.slider').flickity('destroy');
   $('.slider').flickity({
 		// options
 		cellAlign: 'center',
