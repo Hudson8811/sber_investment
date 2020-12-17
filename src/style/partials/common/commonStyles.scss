@@ -673,15 +673,14 @@ body {
   }
 
   &-image {
-    display: block !important;
-    width: auto;
-    max-width: 100% !important;
-    max-height: 100% !important;
-    height: 100% !important;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
     transition: 0.2s;
     will-change: auto;
     margin: 0 auto;
-    object-fit: contain !important;
+    object-fit: contain;
 
     @include mMax {
       transition: none;
@@ -690,12 +689,15 @@ body {
     &_wrapper {
       position: relative;
       margin: auto 0 1.19vw;
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       min-height: 1px;
       height: auto;
       width: 100%;
       transition: 0.2s;
       max-height: 62%;
+      flex-grow: 1;
 
       @include mMax {
         transition: none;
