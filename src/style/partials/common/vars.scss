@@ -3,3 +3,9 @@
     @content;
   }
 }
+
+@mixin mMin {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
