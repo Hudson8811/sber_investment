@@ -111,7 +111,7 @@ $(document).ready(function(){
     $('.sub-slider-wrapper').addClass('is-active');
     $('.bac-slider').flickity('reposition');
     $('.bac-slider').flickity('resize');
-
+    $('.bac_slider').flickity('reloadCells')
   });
 
 
@@ -154,11 +154,8 @@ $(document).ready(function(){
           adaptiveHeight:true,
         });
       } else{
-        $('.bac-slider').flickity('reposition');
-        $('.bac-slider').flickity('resize');
-
-        $('.slider').flickity('reposition');
-        $('.slider').flickity('resize');
+        $('.bac-slider').flickity('reposition').flickity('resize').flickity('reloadCells')
+        $('.slider').flickity('reposition').flickity('resize').flickity('reloadCells')
       }
    
   })
