@@ -4277,7 +4277,7 @@ $(document).ready(function(){
   new fullpage('#fullpage', {
     responsiveWidth: 769,
     afterResponsive: function(isResponsive){
-
+     
     },
     onLeave: function(index, nextIndex, direction) {
       console.log()
@@ -4302,7 +4302,9 @@ $(document).ready(function(){
 		contain: true,
 		wrapAround: true,
 		prevNextButtons: true,
-    pageDots: false,
+    pageDots: true,
+
+    
   });
 
   $('.bac-slider').flickity({
@@ -4311,7 +4313,8 @@ $(document).ready(function(){
 		contain: true,
 		wrapAround: true,
 		prevNextButtons: true,
-		pageDots: false
+    pageDots: true,
+    adaptiveHeight: true
   });
   
   $('.slider').on( 'change.flickity', function( event, index ) {
@@ -4379,6 +4382,16 @@ $(document).ready(function(){
     e.preventDefault();
     $('.main-slider-wrapper').addClass('is-disabled');
     $('.sub-slider-wrapper').addClass('is-active');
+    $('.bac-slider').flickity('destroy');
+    $('.bac-slider').flickity({
+      // options
+      cellAlign: 'center',
+      contain: true,
+      wrapAround: true,
+      prevNextButtons: true,
+      pageDots: true,
+      adaptiveHeight: true
+    });
   });
 
   $(document).on('click', '.bac-slider-burger', function(e){
