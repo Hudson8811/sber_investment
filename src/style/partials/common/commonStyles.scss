@@ -991,6 +991,14 @@ body {
     &:nth-child(2) {
       width: calc(50% + 1.3vw);
 
+      .grad-btn {
+        display: none;
+
+        @include mMax {
+          display: flex;
+        }
+      }
+
       @include mMax {
         width: 100%;
         padding: 3.62vw;
@@ -1026,10 +1034,6 @@ body {
     opacity: 0;
     transition: 0.2s;
     border-radius: 0.625vw;
-
-    .grad-btn {
-      display: none;
-    }
 
     @include mMax {
       display: block;
