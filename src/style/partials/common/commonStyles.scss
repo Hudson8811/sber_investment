@@ -1174,7 +1174,8 @@ body {
     border-radius: 0.625vw;
     margin-top: auto;
     margin-left: -1.04vw;
-    height: 7.18vw;
+    min-height: 7.18vw;
+    max-height: 11.18vw;
     overflow: hidden;
     flex-shrink: 0;
     display: flex;
@@ -1184,8 +1185,9 @@ body {
     @include mMax {
       margin-top: 5.55vw;
       margin-left: -6vw;
-      padding: 2.89vw 3.62vw 6.21vw 23.18vw;
+      padding: 2.89vw 3.62vw 2.89vw 23.18vw;
       height: 46.8vw;
+      max-height: none;
       width: 95.41vw;
       border-radius: 2.89vw;
     }
@@ -1283,7 +1285,7 @@ body {
         padding-right: 1.56vw;
 
         @include mMax {
-          font-size: 2.89vw;
+          font-size: 2.1vw;
           line-height: 3vw;
           padding: 0;
         }
