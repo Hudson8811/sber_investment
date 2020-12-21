@@ -1169,7 +1169,7 @@ body {
     justify-content: flex-start;
     align-items: stretch;
     box-sizing: border-box;
-    padding: 0.52vw 0.78vw 1.71vw 5.04vw;
+    padding: 0.52vw 0.78vw 0.52vw 5.04vw;
     background: linear-gradient(91.97deg, #53d14d 3.53%, #08b0de 100%);
     border-radius: 0.625vw;
     margin-top: auto;
@@ -1177,6 +1177,9 @@ body {
     height: 7.18vw;
     overflow: hidden;
     flex-shrink: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
     @include mMax {
       margin-top: 5.55vw;
@@ -1205,11 +1208,10 @@ body {
 
     &-text {
       position: absolute;
-      top: 0;
-      left: 1.04vw;
+      left: -0.22vw;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
       font-weight: bold;
       font-size: 1.25vw;
       line-height: 2.18vw;
@@ -1220,15 +1222,16 @@ body {
       text-align: center;
       text-shadow: 1px -1px 0px rgba(17, 89, 30, 0.3);
       transform: rotate(-90deg);
-      width: 7.65vw;
+      width: 5vw;
       height: 100%;
       box-sizing: border-box;
       padding-left: 2px;
+      height: 1.71vw;
 
       &:before {
         content: '';
-        right: 0;
-        top: 1.04vw;
+        right: -1.14vw;
+        top: 51%;
         position: absolute;
         display: block;
         width: 1.19vw;
@@ -1241,8 +1244,8 @@ body {
 
       &:after {
         content: '';
-        top: 1.04vw;
-        left: 0;
+        top: 51%;
+        left: -1.14vw;
         position: absolute;
         display: block;
         width: 1.19vw;
@@ -1254,7 +1257,7 @@ body {
       }
 
       @include mMax {
-        left: 28.5vw;
+        left: 9vw;
         font-size: 5.79vw;
         line-height: 5.79vw;
       }
@@ -1272,27 +1275,28 @@ body {
 
       p {
         font-weight: 600;
-        font-size: 0.93vw;
-        line-height: 1.19vw;
+        font-size: 0.72vw;
+        line-height: 0.9vw;
         letter-spacing: 0.03em;
         color: #ffffff;
         box-sizing: border-box;
         padding-right: 1.56vw;
 
         @include mMax {
-          font-size: 3.86vw;
-          line-height: 4.34vw;
+          font-size: 2.89vw;
+          line-height: 3vw;
           padding: 0;
-          margin-top: 2.41vw;
         }
       }
     }
 
     &-icon {
+      position: absolute;
+      top: 0.52vw;
+      right: 0.52vw;
       display: block;
       width: 1.56vw;
       height: 1.56vw;
-      margin-left: auto;
       cursor: pointer;
 
       @include mMax {
