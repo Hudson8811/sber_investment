@@ -4275,6 +4275,7 @@ if(window.jQuery && window.fullpage){
 
 $(document).ready(function(){
   new fullpage('#fullpage', {
+    licenseKey: '930B3D8E-64114A48-BE58EB40-E2698A87',
     responsiveWidth: 769,
     afterResponsive: function(isResponsive){
      
